@@ -144,5 +144,22 @@ html, body {
   width: 3rem;
   height: 3rem;
 }
+#nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar {
+  display: flex;
+  align-items: center;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar .progressTime {
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  font-family: Stem;
+  text-align: center;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar .progressBar {
+  width: 100%;
+  min-width: 30rem;
+  height: 1rem;
+  display: inline-flex;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
