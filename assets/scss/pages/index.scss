@@ -1,0 +1,52 @@
+#nowPlayingBarContainer {
+    width: 100%;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+
+    .nowPlayingBar {
+        display: flex;
+        height: 9rem;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        .nowPlayingLeft, .nowPlayingRight {
+            width: 30%;
+            min-width: 18rem;
+        }
+        .nowPlayingCenter {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .playerControls {
+            .buttons {
+                margin: 0 auto;
+                display: table;
+                .controlButton {
+                    background-color: transparent;
+                    border: none;
+                    vertical-align: middle;
+                    outline: none;
+                    cursor: pointer;
+
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                .play, .pause {
+                    img {
+                        width: 3rem;
+                        height: 3rem; 
+                    }
+                }
+            }
+        }
+        .content {
+
+        }
+    }
+}

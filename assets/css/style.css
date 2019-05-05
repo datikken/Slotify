@@ -97,10 +97,52 @@ html, body {
 }
 #loginText li {
   margin: 2.5rem;
-  background-image: url("../icons/checked.svg");
+  background-image: url("../icons/checked.png");
   background-size: contain;
   background-repeat: no-repeat;
   padding-left: 2rem;
+}
+
+#nowPlayingBarContainer {
+  width: 100%;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
+}
+#nowPlayingBarContainer .nowPlayingBar {
+  display: flex;
+  height: 9rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft, #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight {
+  width: 30%;
+  min-width: 18rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingCenter {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .buttons {
+  margin: 0 auto;
+  display: table;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .buttons .controlButton {
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .buttons .controlButton img {
+  width: 2rem;
+  height: 2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .buttons .play img, #nowPlayingBarContainer .nowPlayingBar .playerControls .buttons .pause img {
+  width: 3rem;
+  height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
