@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Stem;
+  src: url(../fonts/Stem-ExtraLight.otf);
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-size: 62.5%;
+}
+
+#background {
+  background-image: url("../images/bg/player.jpg");
+  background-position: center;
+  background-size: cover;
+  display: table;
+  height: 100vh;
+  width: 100vw;
+}
+
+#loginContainer * {
+  color: #fff;
+  font-family: Stem;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+#loginContainer {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1024px;
+  padding-top: 10rem;
+}
+
+#inputContainer {
+  width: 50rem;
+  padding: 4.5rem;
+  float: left;
+  border-right: 1px solid #999;
+}
+#inputContainer span {
+  color: #9b111e;
+  display: block;
+  margin: 1rem 0;
+}
+#inputContainer h2 {
+  text-align: center;
+}
+#inputContainer input {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  height: 2.7rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  outline: none;
+}
+#inputContainer button {
+  background: transparent;
+  padding: 1rem;
+  border-radius: 300px;
+  display: block;
+  letter-spacing: 0.2rem;
+  border: 2px solid #fff;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+#inputContainer .hideLogin, #inputContainer .hideRegister {
+  margin: 2rem 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+#registerForm, #loginForm {
+  display: none;
+}
+
+#loginText {
+  padding: 4.5rem;
+  display: table-cell;
+}
+#loginText h1 {
+  font-size: 5rem;
+}
+#loginText h2 {
+  margin: 3.5rem 0;
+  font-size: 2.2rem;
+}
+#loginText ul {
+  list-style: none;
+}
+#loginText li {
+  margin: 2.5rem;
+  background-image: url("../icons/checked.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

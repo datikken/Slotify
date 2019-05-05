@@ -21,16 +21,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to slotify</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/register.js"></script>
+    <title>Welcome to Slotify!</title>
 </head>
 <body>
+    <?php if(isset($_POST['loginButton'])) {
+        echo '<script>
+        $(document).ready(function() {
+            $("#loginForm").show();
+            $("#registerForm").hide();
+        });
+        </script>';
+    } else {
+        '<script>
+        $(document).ready(function() {
+            $("#loginForm").hide();
+            $("#registerForm").show();
+        });
+        </script>';
+    }?>
+<div id="background">
+<div id="loginContainer">
     <div id="inputContainer">
         <form action="register.php" id="loginForm" method="POST">
             <h2>Login to your account</h2>
             <p>
                 <?php echo $account->getError(Constants::$loginFailed); ?>
                 <label for="loginUsername">Username</label>
-                <input type="text" id="loginUsername" name="loginUsername" placeholder="e.g. Bart Simpson" required>            
+                <input type="text" id="loginUsername" name="loginUsername" placeholder="e.g. Bart Simpson" value="<?php getInputValue('loginUsername') ?>" required>            
             </p>
             <p>
                 <label for="loginPassword">Password</label>
@@ -38,6 +58,9 @@
             </p>
 
             <button type="submit" name="loginButton">Log in</button>
+            <div id="hasAccountText">
+                <span class="hideLogin">Don't have account yet? Sign up here.</span>
+            </div>
         </form>
 
         <form action="register.php" id="registerForm" method="POST">
@@ -71,8 +94,22 @@
             </p>
 
             <button type="submit" name="registerButton">Sign up</button>
+            <div class="hasAccountText">
+                <span class="hideRegister">Already have an account? Log in here.</span>
+            </div>
         </form>
-    </div>
 
+    </div>
+    <div id="loginText">
+            <h1>All free!</h1>
+            <h2>Listen to your favourite music non-stop!</h2>
+            <ul>
+                <li>Some feature</li>
+                <li>Some feature</li>
+                <li>Some feature</li>
+                <li>Some feature</li>
+            </ul>
+    </div>
+</div>
 </body>
 </html>

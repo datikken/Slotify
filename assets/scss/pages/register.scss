@@ -1,0 +1,100 @@
+
+html,body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-size: 62.5%;
+}
+#background {
+    background-image: url('../images/bg/player.jpg');
+    background-position: center;
+    background-size: cover;
+    display: table;
+    height: 100vh;
+    width: 100vw;
+}
+
+#loginContainer * {
+    color: #fff;
+    font-family: Stem;
+    font-weight: 700;
+    line-height: 1em;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+#loginContainer {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1024px;
+    padding-top: 10rem;
+}
+
+#inputContainer {
+    width: 50rem;
+    padding: 4.5rem;
+    float: left;
+    border-right: 1px solid #999; 
+    span {
+        color: #9b111e;
+        display: block;
+        margin: 1rem 0;
+    }
+    h2 {
+        text-align: center;
+    }
+    input {
+        display: block;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        height: 2.7rem;
+        width: 100%;
+        margin: .5rem 0;
+        outline: none;
+    }
+
+    button {
+        background: transparent;
+        padding: 1rem;
+        border-radius: 300px;
+        display: block;
+        letter-spacing: .2rem;
+        border: 2px solid #fff;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .hideLogin,.hideRegister {
+        margin: 2rem 0;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+#registerForm, #loginForm {
+    display: none;
+}
+#loginText {
+    padding: 4.5rem;
+    display: table-cell;
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        margin: 3.5rem 0;
+        font-size: 2.2rem;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        margin: 2.5rem;
+        background-image: url('../icons/checked.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-left: 2rem;
+    }
+}
