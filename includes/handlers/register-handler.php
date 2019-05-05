@@ -33,8 +33,8 @@ if(isset($_POST['registerButton'])) {
         echo "Fix following errors";
 
     } else {
+        $_SESSION['userLoggedIn'] = $username;
         header("Location: index.php");
-
     }
 }
 ?>
