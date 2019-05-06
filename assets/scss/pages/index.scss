@@ -9,10 +9,62 @@
         height: 9rem;
         padding: 1rem;
         box-sizing: border-box;
-
+        .nowPlayingLeft {
+            .content {
+                display: flex;
+                justify-content: space-evenly;
+                .albumLink {
+                    img {
+                        max-width: 125px;
+                        background-size: cover;
+                    }
+                }
+                .trackInfo {
+                    font-size: 2rem;
+                    margin-top: 1.1rem;
+                    font-size: 2.2rem;
+                    .artistName {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
         .nowPlayingLeft, .nowPlayingRight {
             width: 30%;
             min-width: 18rem;
+        }
+        .nowPlayingRight {
+            .volumeBar {
+                margin-top: 3.1rem;
+                margin-left: 6rem;
+
+                .controlButton {
+                    @include controlButton;
+                    img {
+                        width: 2rem;
+                    }
+                }
+                .progressBar {
+                    min-width: 18rem;
+                    height: 1rem;
+                    display: inline-flex;
+                    cursor: pointer;
+                    margin: 0 2rem;
+                    
+                    &Bg {
+                        background: #404040;
+                        height: 4px;
+                        width: 100%;
+                        border-radius: 2px;
+                        .progress {
+                            background: #a0a0a0;
+                            height: 4px;
+                            width: 0;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
         }
         .nowPlayingCenter {
             width: 40%;
@@ -26,11 +78,7 @@
                 margin: 0 auto;
                 display: table;
                 .controlButton {
-                    background-color: transparent;
-                    border: none;
-                    vertical-align: middle;
-                    outline: none;
-                    cursor: pointer;
+                    @include controlButton;
 
                     img {
                         width: 2rem;
@@ -55,11 +103,25 @@
                     text-align: center;
                 }
                 .progressBar {
-                    width: 100%;
-                    min-width: 30rem;
+                    width: 30vw;
+                    min-width: 18rem;
                     height: 1rem;
                     display: inline-flex;
                     cursor: pointer;
+                    margin: 0 2rem;
+
+                    &Bg {
+                        background: #404040;
+                        height: 4px;
+                        width: 100%;
+                        border-radius: 2px;
+                        .progress {
+                            background: #a0a0a0;
+                            height: 4px;
+                            width: 0;
+                            border-radius: 2px;
+                        }
+                    }
                 }
              }
         }

@@ -22,7 +22,21 @@ if(isset($_SESSION['userLoggedIn'])) {
 <body>
     <div id="nowPlayingBarContainer">
         <div class="nowPlayingBar">
-            <div class="nowPlayingLeft"></div>
+            <div class="nowPlayingLeft">
+                <div class="content">
+                    <span class="albumLink">
+                        <img src="https://ewscripps.brightspotcdn.com/dims4/default/39fa9e4/2147483647/strip/true/crop/1000x563+0+0/resize/1280x720!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2F8d%2Fcc%2Fbc12c88e4679a97466d123f02c78%2Fsweathearts-valentines-day-candy-pexels-2017.png" alt="">
+                    </span>
+                    <div class="trackInfo">
+                        <span class="trackName">
+                            <span>Smile</span>
+                        </span><br/>
+                        <span class="artistName">
+                            <span>Tikken</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
             <div class="nowPlayingCenter">
                 <div class="content playerControls">
                     <div class="buttons">
@@ -47,12 +61,27 @@ if(isset($_SESSION['userLoggedIn'])) {
                     </div>
                     <div class="playbackBar">
                         <span class="progressTime current">0.00</span>
-                        <div class="progressBar"></div>
+                          <div class="progressBar">
+                              <div class="progressBarBg">
+                                  <div class="progress"></div>
+                              </div>
+                          </div>
                         <span class="progressTime remaining">0.00</span>
                     </div>
                 </div>
             </div>
-            <div class="nowPlayingRight"></div>
+            <div class="nowPlayingRight">
+                <div class="volumeBar">
+                    <button class="controlButton volume" title="Volume button">
+                        <img src="assets/icons/volume.png" alt="">
+                    </button>
+                    <div class="progressBar">
+                        <div class="progressBarBg">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

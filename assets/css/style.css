@@ -2,6 +2,11 @@
   font-family: Stem;
   src: url(../fonts/Stem-ExtraLight.otf);
 }
+* {
+  color: #fff;
+  font-family: Stem;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -115,9 +120,58 @@ html, body {
   padding: 1rem;
   box-sizing: border-box;
 }
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content {
+  display: flex;
+  justify-content: space-evenly;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content .albumLink img {
+  max-width: 125px;
+  background-size: cover;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content .trackInfo {
+  font-size: 2rem;
+  margin-top: 1.1rem;
+  font-size: 2.2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content .trackInfo .artistName {
+  font-size: 1.4rem;
+}
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft, #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight {
   width: 30%;
   min-width: 18rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar {
+  margin-top: 3.1rem;
+  margin-left: 6rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .controlButton {
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .controlButton img {
+  width: 2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBar {
+  min-width: 18rem;
+  height: 1rem;
+  display: inline-flex;
+  cursor: pointer;
+  margin: 0 2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBarBg {
+  background: #404040;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBarBg .progress {
+  background: #a0a0a0;
+  height: 4px;
+  width: 0;
+  border-radius: 2px;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingCenter {
   width: 40%;
@@ -155,11 +209,24 @@ html, body {
   text-align: center;
 }
 #nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar .progressBar {
-  width: 100%;
-  min-width: 30rem;
+  width: 30vw;
+  min-width: 18rem;
   height: 1rem;
   display: inline-flex;
   cursor: pointer;
+  margin: 0 2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar .progressBarBg {
+  background: #404040;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+#nowPlayingBarContainer .nowPlayingBar .playerControls .playbackBar .progressBarBg .progress {
+  background: #a0a0a0;
+  height: 4px;
+  width: 0;
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
