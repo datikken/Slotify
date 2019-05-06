@@ -20,6 +20,35 @@ if(isset($_SESSION['userLoggedIn'])) {
     <title>Slotify</title>
 </head>
 <body>
+<div id="mainContainer">
+<div id="topContainer">
+    <div id="navBarContainer">
+        <nav class="navBar">
+            <a href="index.php" class="logo">
+                <img src="assets/icons/logo.png" alt="">
+            </a>
+            <div class="group">
+                <div class="navItem search">
+                    <a href="search.php" class="navItemLink">Search
+                        <img src="assets/icons/search.png"  class="icon" alt="Search">
+                    </a>
+                </div>
+            </div>
+            <div class="group">
+                <div class="navItem">
+                    <a href="browse.php" class="navItemLink">Browse</a>
+                </div>
+                <div class="navItem">
+                    <a href="yourMusic.php" class="navItemLink">Your music</a>
+                </div>
+                <div class="navItem">
+                    <a href="profile.php" class="navItemLink">Profile</a>
+                </div>
+            </div>
+        </nav>        
+    </div>
+</div>
+
     <div id="nowPlayingBarContainer">
         <div class="nowPlayingBar">
             <div class="nowPlayingLeft">
@@ -85,5 +114,7 @@ if(isset($_SESSION['userLoggedIn'])) {
         </div>
 
     </div>
+
+</div>
 </body>
 </html>

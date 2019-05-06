@@ -127,3 +127,56 @@
         }
     }
 }
+
+#topContainer {
+    min-height: 100%;
+    min-width: 100%;
+
+    #navBarContainer {
+        background: black;
+        width: 22rem;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .navBar {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+
+            .logo {
+                border-bottom: 1px solid #a0a0a0;
+                padding: 2rem;
+                img {
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}
+
+.search {
+    border-bottom: 1px solid #a0a0a0;
+    margin: 1rem 0;
+    height: 4rem;
+    .icon {
+        width: 3rem;
+        position: absolute;
+        top: 13.3rem;
+        right: 3rem;
+    }
+}
+
+.navItem {
+    padding: .5rem 0;
+    a {
+        font-size: 2rem;
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: #a0a0a0;
+    }
+}
+
+.navItem a:hover {
+    color: #fff;    
+}
