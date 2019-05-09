@@ -10,7 +10,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  background-color: black;
   font-size: 62.5%;
 }
 
@@ -106,6 +105,51 @@ html, body {
   background-size: contain;
   background-repeat: no-repeat;
   padding-left: 2rem;
+}
+
+body {
+  background: #181818;
+  font-size: 1.4rem;
+  min-width: 72rem;
+  letter-spacing: 1px;
+}
+
+#mainViewContainer {
+  margin-left: 22rem;
+  padding-bottom: 9rem;
+  width: calc(100% - 22rem);
+}
+#mainViewContainer #mainContent {
+  padding: 0 2rem;
+}
+
+.pageHeadingBig {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gridViewItem {
+  display: inline-block;
+  margin-right: 2rem;
+  width: 29%;
+  max-width: 20rem;
+  min-width: 15rem;
+  margin-bottom: 2rem;
+}
+.gridViewItem a {
+  text-decoration: none;
+}
+.gridViewItem img {
+  width: 100%;
+}
+
+.gridViewInfo {
+  font-weight: 300;
+  text-align: center;
+  padding: 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #nowPlayingBarContainer {
