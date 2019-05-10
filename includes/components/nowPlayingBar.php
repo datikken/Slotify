@@ -16,6 +16,10 @@
         setTrack(currentPlaylist[0], currentPlaylist, false);
         updateVolumeProgressBar(audioElement.audio);
 
+        $('#nowPlayingBarContainer').on('mousedown touchstart mousemove touchmove', function(e) {
+            // e.preventDefault();
+        });
+
         $('.playbackBar .progressBar').mousedown(function() {
             mouseDown = true;
         });
@@ -29,9 +33,6 @@
         $('.playbackBar .progressBar').mouseup(function(e) {
             timeFromOffset(e, this);  
         });
-
-
-
 
         $('.volumeBar .progressBar').mousedown(function() {
             mouseDown = true;
@@ -167,9 +168,7 @@
                 <img src="assets/icons/volume.png" alt="">
             </button>
             <div class="progressBar">
-                <div class="progressBarBg">
-                    <div class="progress"></div>
-                </div>
+              <input id="vol-control" type="range" min="0" max="100" value=100 step="1"/>              
             </div>
         </div>
     </div>

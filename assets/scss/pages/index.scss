@@ -80,35 +80,66 @@ body {
             min-width: 18rem;
         }
         .nowPlayingRight {
+
             .volumeBar {
+
                 display: flex;
                 align-items: center;
-                margin-top: 3.1rem;
+                margin-top: 2.6rem;
                 margin-left: 6rem;
-
+                
                 .controlButton {
                     @include controlButton;
                     img {
                         width: 2rem;
+                        margin-top: 7px;
                     }
                 }
                 .progressBar {
                     min-width: 18rem;
-                    height: 1rem;
+                    height: .8rem;
                     display: inline-flex;
                     cursor: pointer;
                     margin: 0 2rem;
+
+                    input[type='range'] {
+                        overflow: hidden;
+                        width: 100%;
+                        max-width: 10rem;
+                        -webkit-appearance: none;
+                        background-color: #404040;
+                        outline: none;
+                    }
+                    
+                    input[type='range']::-webkit-slider-runnable-track {
+                        height: 10px;
+                        -webkit-appearance: none;
+                        color: #404040;
+                        margin-top: -1px;
+                    }
+                    
+                    input[type='range']::-webkit-slider-thumb {
+                        width: 10px;
+                        -webkit-appearance: none;
+                        height: 10px;
+                        cursor: pointer;
+                        background: #a0a0a0;
+                        box-shadow: -80px 0 0 80px #a0a0a0;
+                    }
                     
                     &Bg {
                         background: #404040;
                         height: 4px;
                         width: 100%;
                         border-radius: 2px;
+                        max-width: 10rem;
+
                         .progress {
                             background: #a0a0a0;
                             height: 4px;
                             width: 0;
                             border-radius: 2px;
+
                         }
                     }
                 }

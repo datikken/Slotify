@@ -188,7 +188,7 @@ body {
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar {
   display: flex;
   align-items: center;
-  margin-top: 3.1rem;
+  margin-top: 2.6rem;
   margin-left: 6rem;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .controlButton {
@@ -200,19 +200,43 @@ body {
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .controlButton img {
   width: 2rem;
+  margin-top: 7px;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBar {
   min-width: 18rem;
-  height: 1rem;
+  height: 0.8rem;
   display: inline-flex;
   cursor: pointer;
   margin: 0 2rem;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBar input[type=range] {
+  overflow: hidden;
+  width: 100%;
+  max-width: 10rem;
+  -webkit-appearance: none;
+  background-color: #404040;
+  outline: none;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBar input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #404040;
+  margin-top: -1px;
+}
+#nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBar input[type=range]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: pointer;
+  background: #a0a0a0;
+  box-shadow: -80px 0 0 80px #a0a0a0;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBarBg {
   background: #404040;
   height: 4px;
   width: 100%;
   border-radius: 2px;
+  max-width: 10rem;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar .progressBarBg .progress {
   background: #a0a0a0;
