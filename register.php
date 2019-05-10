@@ -26,21 +26,27 @@
     <title>Welcome to Slotify!</title>
 </head>
 <body>
-    <?php if(isset($_POST['loginButton'])) {
-        echo '<script>
-        $(document).ready(function() {
+    <script>
+        
+        function login() {
             $("#loginForm").show();
             $("#registerForm").hide();
-        });
-        </script>';
-    } else {
-        '<script>
-        $(document).ready(function() {
+          }
+        function signUp(){
             $("#loginForm").hide();
             $("#registerForm").show();
+        }
+      
+
+        $(document).ready(function() {
+
+            $("#loginForm").hide();
+            $("#registerForm").show();
+            
         });
-        </script>';
-    }?>
+
+    </script>
+
 <div id="background">
 <div id="loginContainer">
     <div id="inputContainer">
@@ -58,7 +64,7 @@
 
             <button type="submit" name="loginButton">Log in</button>
             <div id="hasAccountText">
-                <span class="hideLogin">Don't have account yet? Sign up here.</span>
+                <span class="hideLogin" onclick="signUp()">Don't have account yet? Sign up here.</span>
             </div>
         </form>
 
@@ -94,7 +100,7 @@
 
             <button type="submit" name="registerButton">Sign up</button>
             <div class="hasAccountText">
-                <span class="hideRegister">Already have an account? Log in here.</span>
+                <span class="hideRegister" onclick="login()">Already have an account? Log in here.</span>
             </div>
         </form>
 

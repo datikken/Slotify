@@ -1,6 +1,10 @@
 let currentPlaylist = [];
+let shufflePlaylist = [];
 let audioElement;
 let mouseDown = false;
+let currentIndex = 0;
+let repeat = false;
+let shuffle = false;
 
 function formatTime(sec) {
     let time = Math.round(sec);
@@ -29,6 +33,9 @@ function Audio(){
 
     this.currentlyPlaying;
     this.audio = document.createElement('audio');
+    this.audio.addEventListener('ended', function() {
+        nextSong();
+    });
     
     this.audio.addEventListener("canplay", function() {
         const duration = formatTime(this.duration);
