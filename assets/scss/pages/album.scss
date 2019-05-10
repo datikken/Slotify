@@ -1,0 +1,102 @@
+.entityInfo {
+    padding: 4rem 0 1rem 0;
+    display: inline-block;
+    width: 100%;
+
+.leftSection {
+    img {
+        width: 100%;
+    }
+
+    width: 30%;
+    float: left;
+    max-width: 25rem;
+}
+
+.rightSection {
+    width: 70%;
+    float: left;
+    padding: .5rem 1rem .5rem 4rem;
+    box-sizing: border-box;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        color: #939393;
+        font-weight: 200;
+    }
+  }
+}
+
+.trackList {
+    padding: 0; 
+
+    .trackListRow {
+        height: 4rem;
+        padding: 1.5rem 1rem;
+        list-style: none;
+
+        .trackCount {
+            width: 8%;
+            float: left;
+            span {
+                visibility: visible;
+            }
+
+            img {
+                width: 2rem;
+                visibility: hidden;
+                position: absolute;
+                cursor: pointer;
+            }
+        }
+    }
+    .trackListRow:hover {
+        background: #282828;
+        .trackCount img {
+            visibility: visible;
+        }
+        .trackCount span {
+            visibility: hidden;
+        }
+        .trackOptions img {
+            visibility: visible;
+        }
+
+    }
+}
+.trackInfo {
+    width: 75%;
+    float: left;
+
+    span {
+        display: block;
+    }
+}
+
+.trackOptions {
+    width: 5%;
+    float: left;
+    text-align: right;
+
+    img {
+        width: 1.5rem;
+        visibility: hidden;
+    }
+}
+
+.trackDuration {
+    width: 12%;
+    float: left;
+    text-align: right;
+}
+.trackName {
+    color: #fff;
+    margin-bottom: 7px;
+}
+.artistName {
+    color: #939393;
+    font-weight: 200;    
+}

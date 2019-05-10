@@ -324,4 +324,99 @@ body {
   color: #fff;
 }
 
+.entityInfo {
+  padding: 4rem 0 1rem 0;
+  display: inline-block;
+  width: 100%;
+}
+.entityInfo .leftSection {
+  width: 30%;
+  float: left;
+  max-width: 25rem;
+}
+.entityInfo .leftSection img {
+  width: 100%;
+}
+.entityInfo .rightSection {
+  width: 70%;
+  float: left;
+  padding: 0.5rem 1rem 0.5rem 4rem;
+  box-sizing: border-box;
+}
+.entityInfo .rightSection h2 {
+  margin-top: 0;
+}
+.entityInfo .rightSection p {
+  color: #939393;
+  font-weight: 200;
+}
+
+.trackList {
+  padding: 0;
+}
+.trackList .trackListRow {
+  height: 4rem;
+  padding: 1.5rem 1rem;
+  list-style: none;
+}
+.trackList .trackListRow .trackCount {
+  width: 8%;
+  float: left;
+}
+.trackList .trackListRow .trackCount span {
+  visibility: visible;
+}
+.trackList .trackListRow .trackCount img {
+  width: 2rem;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+.trackList .trackListRow:hover {
+  background: #282828;
+}
+.trackList .trackListRow:hover .trackCount img {
+  visibility: visible;
+}
+.trackList .trackListRow:hover .trackCount span {
+  visibility: hidden;
+}
+.trackList .trackListRow:hover .trackOptions img {
+  visibility: visible;
+}
+
+.trackInfo {
+  width: 75%;
+  float: left;
+}
+.trackInfo span {
+  display: block;
+}
+
+.trackOptions {
+  width: 5%;
+  float: left;
+  text-align: right;
+}
+.trackOptions img {
+  width: 1.5rem;
+  visibility: hidden;
+}
+
+.trackDuration {
+  width: 12%;
+  float: left;
+  text-align: right;
+}
+
+.trackName {
+  color: #fff;
+  margin-bottom: 7px;
+}
+
+.artistName {
+  color: #939393;
+  font-weight: 200;
+}
+
 /*# sourceMappingURL=style.css.map */

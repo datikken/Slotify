@@ -1,6 +1,8 @@
 <?php 
 include("includes/config.php");
-
+include("includes/classes/Artist.php");
+include("includes/classes/Album.php");
+include("includes/classes/Song.php");
 // session_destroy(); logout
 
 if(isset($_SESSION['userLoggedIn'])) {
@@ -17,6 +19,7 @@ if(isset($_SESSION['userLoggedIn'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/profile-pics/favicon.png" type="image/x-icon">
     <title>Slotify</title>
 </head>
 <body>
