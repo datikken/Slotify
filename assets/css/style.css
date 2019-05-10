@@ -385,11 +385,11 @@ body {
   visibility: visible;
 }
 
-.trackInfo {
+.trackInfoAlbum {
   width: 75%;
   float: left;
 }
-.trackInfo span {
+.trackInfoAlbum span {
   display: block;
 }
 

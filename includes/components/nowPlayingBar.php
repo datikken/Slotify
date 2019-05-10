@@ -17,7 +17,21 @@
     });
 
     function setTrack(id, newPlaylist, play) {
-        audioElement.setTrack('assets/music/bensound-acousticbreeze.mp3');
+
+        $.post('includes/handlers/ajax/getSongJson.php', { songId: id }, function(data) {
+           const track = JSON.parse(data);
+           $('.trackName span').text(track.title); 
+
+           $.post('includes/handlers/ajax/getArtistJson.php', { artistId: track.artist }, function(data) {
+             const artist = JSON.parse(data);
+             $('.artistName span').text(artist.name); 
+
+           });
+
+           audioElement.setTrack(track.path);
+           audioElement.play();
+        })
+
         if(play) {
             audioElement.play();
         }
@@ -45,7 +59,7 @@
             </span>
             <div class="trackInfo">
                 <span class="trackName">
-                    <span>Smile</span>
+                    <span></span>
                 </span><br/>
                 <span class="artistName">
                     <span>Tikken</span>
