@@ -62,6 +62,7 @@ body {
                     img {
                         max-width: 125px;
                         background-size: cover;
+                        height: 7rem;
                     }
                 }
                 .trackInfo {
@@ -80,6 +81,8 @@ body {
         }
         .nowPlayingRight {
             .volumeBar {
+                display: flex;
+                align-items: center;
                 margin-top: 3.1rem;
                 margin-left: 6rem;
 

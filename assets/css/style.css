@@ -171,6 +171,7 @@ body {
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content .albumLink img {
   max-width: 125px;
   background-size: cover;
+  height: 7rem;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingLeft .content .trackInfo {
   font-size: 2rem;
@@ -185,6 +186,8 @@ body {
   min-width: 18rem;
 }
 #nowPlayingBarContainer .nowPlayingBar .nowPlayingRight .volumeBar {
+  display: flex;
+  align-items: center;
   margin-top: 3.1rem;
   margin-left: 6rem;
 }

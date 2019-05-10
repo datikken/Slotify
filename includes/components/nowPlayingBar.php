@@ -14,7 +14,57 @@
         currentPlaylist = <?php echo $jsonArray; ?>;
         audioElement = new Audio();
         setTrack(currentPlaylist[0], currentPlaylist, false);
+        updateVolumeProgressBar(audioElement.audio);
+
+        $('.playbackBar .progressBar').mousedown(function() {
+            mouseDown = true;
+        });
+
+        $('.playbackBar .progressBar').mousemove(function(e) {
+            if(mouseDown) {
+                timeFromOffset(e, this);
+            }   
+        });
+
+        $('.playbackBar .progressBar').mouseup(function(e) {
+            timeFromOffset(e, this);  
+        });
+
+
+
+
+        $('.volumeBar .progressBar').mousedown(function() {
+            mouseDown = true;
+        });
+
+        $('.volumeBar .progressBar').mousemove(function(e) {
+            if(mouseDown) {
+                let percentage = e.offsetX / $(this).width();
+
+                if(percentage >= 0 && percentage <= 1) {
+                    audioElement.audio.volume = percentage;
+              }
+            }   
+        });
+
+        $('.volumeBar .progressBar').mouseup(function(e) {
+            let percentage = e.offsetX / $(this).width();
+
+            if(percentage >= 0 && percentage <= 1) {
+                    audioElement.audio.volume = percentage;
+            }
+        });
+
+        $(document).mouseup(function() {
+            mouseDown = false;  
+        });
     });
+
+    function timeFromOffset(mouse, progressBar) {
+        let percentage = mouse.offsetX / $(progressBar).width() * 100;
+        let seconds = audioElement.audio.duration * (percentage / 100);
+        audioElement.setTime(seconds);
+    }
 
     function setTrack(id, newPlaylist, play) {
 
@@ -25,11 +75,16 @@
            $.post('includes/handlers/ajax/getArtistJson.php', { artistId: track.artist }, function(data) {
              const artist = JSON.parse(data);
              $('.artistName span').text(artist.name); 
-
            });
 
-           audioElement.setTrack(track.path);
-           audioElement.play();
+           $.post('includes/handlers/ajax/getAlbumJson.php', { albumId: track.album }, function(data) {
+             const album = JSON.parse(data);
+
+             $('.albumLink img').attr("src", album.artworkPath); 
+           });
+
+           audioElement.setTrack(track);
+           playSong();
         })
 
         if(play) {
@@ -39,6 +94,12 @@
     }
 
     function playSong() {
+        if(audioElement.audio.currentTime == 0) {
+            $.post('includes/handlers/ajax/updatePlays.php', { songId: audioElement.currentlyPlaying.id });
+        } else {
+            console.log('Dont update')
+        }
+
         $('.controlButton.play').hide();
         $('.controlButton.pause').show();
         audioElement.play();
@@ -55,7 +116,7 @@
     <div class="nowPlayingLeft">
         <div class="content">
             <span class="albumLink">
-                <img src="https://ewscripps.brightspotcdn.com/dims4/default/39fa9e4/2147483647/strip/true/crop/1000x563+0+0/resize/1280x720!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2F8d%2Fcc%2Fbc12c88e4679a97466d123f02c78%2Fsweathearts-valentines-day-candy-pexels-2017.png" alt="">
+                <img src="" alt="">
             </span>
             <div class="trackInfo">
                 <span class="trackName">
