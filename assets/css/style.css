@@ -320,6 +320,7 @@ body {
 #topContainer #navBarContainer .navBar .logo {
   border-bottom: 1px solid #a0a0a0;
   padding: 2rem;
+  outline: none;
 }
 #topContainer #navBarContainer .navBar .logo img {
   width: 5rem;

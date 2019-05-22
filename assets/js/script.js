@@ -6,6 +6,8 @@ let mouseDown = false;
 let currentIndex = 0;
 let repeat = false;
 let shuffle = false;
+let userLoggedIn;
+
 
 function formatTime(sec) {
     let time = Math.round(sec);
@@ -15,6 +17,14 @@ function formatTime(sec) {
     let extraZero = (seconds < 10) ? '0': '';
 
     return minutes + ":" + extraZero + seconds;
+}
+
+function openPage(url) {
+    if(url.indexOf('?') == -1) {
+        url = url + '?';
+    }
+    var encodedUrl = encodeURI(url + "&userLoggedIn=" +userLoggedIn);
+    $('#mainContent').load(encodedUrl);
 }
 
 function updateTimeProgressBar(audio) {
