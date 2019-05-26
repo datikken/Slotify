@@ -22,6 +22,7 @@ if(isset($_SESSION['userLoggedIn'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/profile-pics/favicon.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/cursorAtEnd.js"></script>
     <script src="assets/js/script.js"></script>
     <title>Slotify</title>
 </head>

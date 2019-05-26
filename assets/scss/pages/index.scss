@@ -250,6 +250,13 @@ body {
 
 .navItem {
     padding: .5rem 0;
+
+    .navItemLink {
+        display: block;
+        margin-top: .62rem;
+        outline: none;
+        cursor: pointer;
+    }
     a {
         font-size: 2rem;
         text-decoration: none;

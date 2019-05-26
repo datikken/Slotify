@@ -341,6 +341,12 @@ body {
 .navItem {
   padding: 0.5rem 0;
 }
+.navItem .navItemLink {
+  display: block;
+  margin-top: 0.62rem;
+  outline: none;
+  cursor: pointer;
+}
 .navItem a {
   font-size: 2rem;
   text-decoration: none;
@@ -479,6 +485,43 @@ h2 {
 }
 .artistName span {
   outline: none;
+}
+
+.searchContainer {
+  background: #242424;
+  padding: 2rem 2.8rem;
+}
+.searchContainer h4 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 12px;
+  color: #939393;
+}
+.searchContainer input {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+.searchResultRow {
+  padding: 1.5rem 1rem;
+}
+.searchResultRow .artistName {
+  color: #fff;
+  cursor: pointer;
+}
+.searchResultRow:hover {
+  background: #282828;
+}
+
+.noResults {
+  display: block;
+  margin: 1rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
