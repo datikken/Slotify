@@ -2,19 +2,7 @@
     text-align: center;
 }
 .headerButtons {
-    button {
-        cursor: pointer;
-        color: #fff;
-        margin-bottom: 10px;
-        background: transparent;
-        font-weight: 500;
-        letter-spacing: 2px;
-        border: 2px solid #939393;
-        border-radius: 500px;
-        padding: 1.5rem;
-        min-width: 13rem;
-        outline: none;
-    }
+
 }
 
 .borderBottom {
@@ -31,4 +19,17 @@ h2 {
     span {
         outline: none;
     }
+}
+button {
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 10px;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border: 2px solid #939393;
+    border-radius: 500px;
+    padding: 1.5rem;
+    min-width: 13rem;
+    outline: none;
 }

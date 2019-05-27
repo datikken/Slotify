@@ -6,8 +6,25 @@ let mouseDown = false;
 let currentIndex = 0;
 let repeat = false;
 let shuffle = false;
-let userLoggedIn;
+var userLoggedIn;
 let timer;
+
+
+function createPlaylist(username) {
+    let alert = prompt('Please enter a name of your playlist');
+
+    if(alert != null) {
+        $.post('includes/handlers/ajax/createPlaylist.php', {name: alert, username: userLoggedIn})
+        .done(function(error) {
+            openPage('yourMusic.php');
+
+        if(error != null) {
+            console.log(error);
+            return;
+          }
+        })
+    }
+}
 
 function formatTime(sec) {
     let time = Math.round(sec);
